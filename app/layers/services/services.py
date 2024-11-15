@@ -1,10 +1,9 @@
 # capa de servicio/lógica de negocio
-from transport import getAllImages
 from ..persistence import repositories
 from ..utilities import translator
 from django.contrib.auth import get_user
 
-def getAllImages(input=None):
+def geAltlImages(input=None):
     # obtiene un listado de datos "crudos" desde la API, usando a transport.py.
     json_collection = [] 
 
