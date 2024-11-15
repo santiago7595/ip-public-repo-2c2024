@@ -2,6 +2,7 @@
 from ..persistence import repositories
 from ..utilities import translator
 from django.contrib.auth import get_user
+from transport.transport import getAllImages
 
 def geAltlImages(input=None):
     # obtiene un listado de datos "crudos" desde la API, usando a transport.py.
