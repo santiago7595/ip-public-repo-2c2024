@@ -12,6 +12,8 @@ def geAltlImages(input=None):
     images = []
     
     for datos in json_collection:
+     card = translator.json_to_card(datos)
+        
         
      return images
 
