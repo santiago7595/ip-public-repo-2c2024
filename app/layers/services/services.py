@@ -10,8 +10,10 @@ def geAltlImages(input=None):
 
     # recorre cada dato crudo de la colección anterior, lo convierte en una Card y lo agrega a images.
     images = []
-
-    return images
+    
+    for datos in json_collection:
+        
+     return images
 
 # añadir favoritos (usado desde el template 'home.html')
 def saveFavourite(request):
