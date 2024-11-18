@@ -6,7 +6,7 @@ from transport.transport import getAllImages
 
 def geAltlImages(input=None):
     # obtiene un listado de datos "crudos" desde la API, usando a transport.py.
-    json_collection = [] 
+    json_collection = getAllImages
 
     # recorre cada dato crudo de la colección anterior, lo convierte en una Card y lo agrega a images.
     images = []
