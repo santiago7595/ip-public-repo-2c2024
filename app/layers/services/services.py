@@ -1,8 +1,8 @@
 # capa de servicio/lógica de negocio
 from ..persistence import repositories
-from ..utilities import translator
+from app.layers.utilities import translator 
 from django.contrib.auth import get_user
-from layers.transport.transport import getAllImages
+from transport.transport import getAllImages
 
 
 def geAltlImages(input=None):
