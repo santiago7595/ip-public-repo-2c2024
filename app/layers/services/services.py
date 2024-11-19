@@ -5,7 +5,7 @@ from django.contrib.auth import get_user
 from transport.transport import getAllImages
 
 
-def geAltlImages(input=None):
+def getAllImages(input=None):
     # obtiene un listado de datos "crudos" desde la API, usando a transport.py.
     json_collection = getAllImages(input)
 
@@ -13,7 +13,7 @@ def geAltlImages(input=None):
     images = []
     
     for datos in json_collection:
-        card = translator.json_to_card(datos)  
+        card = translator.fromRequestIntoCard(datos)  
         images.append(card)
     
     return images
