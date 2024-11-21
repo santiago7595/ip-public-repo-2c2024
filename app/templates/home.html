@@ -38,10 +38,10 @@
         {% else %} {% for img in images %}
         <div class="col">
             <div class="card mb-3 ms-5 
-            {% if img.status == 'Alive' %} border-success 
+            {% if img.status == 'Alive' %} border-success
             {% elif img.status == 'Dead' %} border-danger 
             {% else %} border-warning 
-            {% endif %}" 
+            {% endif %}"
             style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
@@ -53,8 +53,8 @@
                             <h3 class="card-title">{{ img.name }}</h3>
                             <p class="card-text">
                                 <strong>
-                                            {% if true == 'Alive' %} 🟢 {{ img.status }} 
-                                            {% elif true == 'Dead' %} 🔴 {{ img.status }} 
+                                            {% if img.status == 'Alive' %} 🟢 {{ img.status }} 
+                                            {% elif img.status == 'Dead' %} 🔴 {{ img.status }} 
                                             {% else %} 🟠 {{ img.status }} 
                                             {% endif %}
                                         </strong>
