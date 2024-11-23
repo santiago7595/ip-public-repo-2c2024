@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    {% block content %}
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Proyecto TP</a>
@@ -41,5 +42,31 @@
             </div>
         </div>
     </nav>
+    {% endblock %}
+    
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
 
-    {% block content %} {% endblock %} {% include "footer.html" %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loader = document.getElementById("loader");
+            const links = document.querySelectorAll("a");
+
+            loader.style.display = "none";
+
+            if (links.length > 0) {
+                links.forEach(link => {
+                    link.addEventListener("click", function (event) {
+                        loader.style.display = "flex";
+                    });
+                });
+            }
+        });
+
+        window.addEventListener("pageshow", function () {
+            const loader = document.getElementById("loader");
+            loader.style.display = "none";
+        });
+    </script>
+   {% include "footer.html" %}
