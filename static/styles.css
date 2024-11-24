@@ -10,9 +10,9 @@ body {
 
 .table-wrapper {
     min-width: 1000px;
-    background: #fff;
+    background: #1e1e2e;
     padding: 20px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .03);
 }
 
 .table-title {
@@ -106,7 +106,7 @@ table.table td i {
     font-size: 95%;
     width: 30px;
     height: 30px;
-    color: #999;
+    color: #b0bec5;
     margin: 0 2px;
     line-height: 30px;
     border-radius: 30px !important;
