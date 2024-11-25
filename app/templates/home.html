@@ -1,8 +1,8 @@
 {% extends 'header.html' %} {% block content %}
 <main>
-    <h1 class="text-center text-primary mb-4">Buscador Rick & Morty</h1>
+    <h1 class="text-center mt-4 text-primary mb-4">Buscador Rick & Morty</h1>
 
-    <div class="d-flex justify-content-end" style="margin-bottom: 1%; margin-right: 2rem;">
+    <div class="d-flex justify-content-center mt-4" style="margin-bottom: 1%">
         <!-- Selector de página -->
         <nav aria-label="...">
             <ul class="pagination">
@@ -42,7 +42,7 @@
             {% elif img.status == 'Dead' %} border-danger 
             {% else %} border-warning 
             {% endif %}"
-            style="max-width: 540px;">
+            style="background-color: #2e3f51; color: #cfd8dc; max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="{{ img.url }}" class="card-img-top" alt="imagen">
