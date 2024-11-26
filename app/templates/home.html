@@ -36,19 +36,19 @@
         {% if images|length == 0 %}
         <h2 class="text-center">La búsqueda no arrojó resultados...</h2>
         {% else %} {% for img in images %}
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="card mb-3 ms-5
             {% if img.status == 'Alive' %} border-success
             {% elif img.status == 'Dead' %} border-danger 
             {% else %} border-warning 
             {% endif %}"
-            style="background-color: #2e3f51; color: #cfd8dc; max-width: 540px;">
+            style="background-color: #2e3f51; color: #cfd8dc; max-width: 250px;">
                 <div class="row g-0">
-                    <div class="col-md-4">
+                    <div class="col-md-0">
                         <img src="{{ img.url }}" class="card-img-top" alt="imagen">
                     </div>
 
-                    <div class="col-md-8">
+                    <div class="col-md-40">
                         <div class="card-body">
                             <h3 class="card-title">{{ img.name }}</h3>
                             <p class="card-text">
