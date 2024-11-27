@@ -1,8 +1,8 @@
 {% extends 'header.html' %} {% block content %}
 <main>
-    <h1 class="text-center">Buscador Rick & Morty</h1>
+    <h1 class="text-center mt-4 text-primary mb-4">Buscador Rick & Morty</h1>
 
-    <div class="d-flex justify-content-end" style="margin-bottom: 1%; margin-right: 2rem;">
+    <div class="d-flex justify-content-center mt-4" style="margin-bottom: 1%">
         <!-- Selector de página -->
         <nav aria-label="...">
             <ul class="pagination">
@@ -23,32 +23,32 @@
         </nav>
     </div>
 
-    <div class="d-flex justify-content-center" style="margin-bottom: 1%">
+    <div class="d-flex justify-content-center mb-4" style="margin-bottom: 1%">
         <!-- Buscador del sitio -->
-        <form class="d-flex" action="{% url 'buscar' %}" method="POST">
+        <form class="d-flex w-50" action="{% url 'buscar' %}" method="POST">
             {% csrf_token %}
             <input class="form-control me-2" type="search" name="query" placeholder="Escribí una palabra" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
+            <button class="btn btn-primary" type="submit">Buscar</button>
         </form>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row g-4">
         {% if images|length == 0 %}
         <h2 class="text-center">La búsqueda no arrojó resultados...</h2>
         {% else %} {% for img in images %}
-        <div class="col">
-            <div class="card mb-3 ms-5 
+        <div class="col-md-3">
+            <div class="card mb-3 ms-5
             {% if img.status == 'Alive' %} border-success
             {% elif img.status == 'Dead' %} border-danger 
             {% else %} border-warning 
             {% endif %}"
-            style="max-width: 540px;">
+            style="background-color: #2e3f51; color: #cfd8dc; max-width: 250px;">
                 <div class="row g-0">
-                    <div class="col-md-4">
+                    <div class="col-md-0">
                         <img src="{{ img.url }}" class="card-img-top" alt="imagen">
                     </div>
 
-                    <div class="col-md-8">
+                    <div class="col-md-40">
                         <div class="card-body">
                             <h3 class="card-title">{{ img.name }}</h3>
                             <p class="card-text">
